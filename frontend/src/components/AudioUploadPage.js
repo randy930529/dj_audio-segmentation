@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { SingleTexto } from './SingleTexto';
 import { AudioInputClip } from './AudioInputClip';
 import { ButtonUpload } from './ButtonUpload';
@@ -45,12 +46,14 @@ class AudioUploadPage extends React.Component{
                     value="Upload" 
                 />
 
-                <ButtonGo 
-                    class="button is-success is-rounded m-3" 
-                    disabled={"isDisabled"?"disabled":""} 
-                    onClick={this.props.onClick} 
-                    value="Go" 
-                />
+                <Link to={"/audio"}>
+                    <ButtonGo 
+                        class="button is-success is-rounded m-3" 
+                        disabled={"isDisabled"?"disabled":""} 
+                        onClick={this.props.onClick} 
+                        value="Go" 
+                    />
+                </Link>
 			</div>
 		</div>
         </div>

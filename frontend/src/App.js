@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import styles from './App.module.css';
 import 'bulma';
 import LandigPage from './pages/LandigPage';
+import AudioCard from './pages/AudioCard';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       </header>
       <main>
           <Routes>
-              <Route exact path="/audio" />
+              <Route exact path="/audio" element={<AudioCard />} />
               <Route path="/" element={<LandigPage />} />
           </Routes>
       </main>

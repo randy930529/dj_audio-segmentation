@@ -1,6 +1,5 @@
 import React from "react";
 import AudioUploadPage from "../components/AudioUploadPage";
-import AudioCard from "./AudioCard";
 
 class LandigPage extends React.Component{
 
@@ -8,7 +7,6 @@ class LandigPage extends React.Component{
         return (
             <div className="content p-3">
                 <AudioUploadPage />
-                <AudioCard />
             </div>
         ) 
     }
