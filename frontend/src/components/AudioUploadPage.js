@@ -49,7 +49,7 @@ class AudioUploadPage extends React.Component{
                 <Link to={"/audio"}>
                     <ButtonGo 
                         class="button is-success is-rounded m-3" 
-                        disabled={"isDisabled"?"disabled":""} 
+                        disabled={!"isDisabled"?"disabled":""} 
                         onClick={this.props.onClick} 
                         value="Go" 
                     />

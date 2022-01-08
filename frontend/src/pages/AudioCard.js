@@ -4,6 +4,8 @@ import img from "./wayform.jpg";
 import { AudioClip } from "../components/AudioClip";
 import { ButtonIcon } from "../components/ButtonIcon";
 import { TableTag } from "../components/TableTag";
+import CategoryCardModal from "../components/CategoryCardModal";
+import { ModalTrigger } from "../components/ModalTrigger";
 
 class AudioCard extends React.Component {
     
@@ -20,7 +22,10 @@ class AudioCard extends React.Component {
                                 <ButtonIcon icon={FaSearchPlus} />
                                 <ButtonIcon icon={FaSearchMinus} />
                                 <ButtonIcon icon={FaSearch} />
-                                <ButtonIcon icon={FaSave} />
+                                <ModalTrigger 
+                                    icon={FaSave} 
+                                    dataTarget="modal-js-example" 
+                                />
                                 <ButtonIcon icon={FaBan} />
                                 <ButtonIcon icon={FaRegPaperPlane} />
                             </div>
@@ -31,6 +36,7 @@ class AudioCard extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <CategoryCardModal />
                 </div>
             )
     }
