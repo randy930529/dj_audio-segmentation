@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import styles from './App.module.css';
 import 'bulma';
+import LandigPage from './pages/LandigPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+      <header>
+          <Link to="/"><h1 className={styles.AppLink}>Audio Segmentation Tool</h1></Link>
       </header>
-    </div>
+      <main>
+          <Routes>
+              <Route exact path="/audio" />
+              <Route path="/" element={<LandigPage />} />
+          </Routes>
+      </main>
+    </Router>
   );
 }
 
