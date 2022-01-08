@@ -1,6 +1,9 @@
 import React from "react";
 import { FaPlayCircle, FaSearchPlus, FaSearchMinus, FaSearch, FaSave, FaBan, FaRegPaperPlane } from 'react-icons/fa';
 import img from "./wayform.jpg";
+import { AudioClip } from "../components/AudioClip";
+import { ButtonIcon } from "../components/ButtonIcon";
+import { TableTag } from "../components/TableTag";
 
 class AudioCard extends React.Component {
     
@@ -9,87 +12,22 @@ class AudioCard extends React.Component {
                 <div>
                     <div className="content p-3">
                         <div className="columns p-3 is-justify-content-center">
-                            <img src={img} alt="" />
+                            <AudioClip img={img} />
                         </div>
                         <div className="columns p-3 is-justify-content-center">
-                            <div class="field is-grouped">
-                                <p class="control">
-                                    <button class="button">
-                                    <span class="icon">
-                                        <FaPlayCircle />
-                                    </span>
-                                    </button>
-                                </p>
-                                <p class="control">
-                                    <button class="button">
-                                    <span class="icon">
-                                        <FaSearchPlus />
-                                    </span>
-                                    </button>
-                                </p>
-                                <p class="control">
-                                    <button class="button">
-                                    <span class="icon">
-                                        <FaSearchMinus />
-                                    </span>
-                                    </button>
-                                </p>
-                                <p class="control">
-                                    <button class="button">
-                                    <span class="icon">
-                                        <FaSearch />
-                                    </span>
-                                    </button>
-                                </p>
-                                <p class="control">
-                                    <button class="button">
-                                    <span class="icon">
-                                        <FaSave />
-                                    </span>
-                                    </button>
-                                </p>
-                                <p class="control">
-                                    <button class="button">
-                                    <span class="icon">
-                                        <FaBan />
-                                    </span>
-                                    </button>
-                                </p>
-                                <p class="control">
-                                    <button class="button">
-                                    <span class="icon">
-                                        <FaRegPaperPlane />
-                                    </span>
-                                    </button>
-                                </p>
+                            <div className="field is-grouped">
+                                <ButtonIcon icon={FaPlayCircle} />
+                                <ButtonIcon icon={FaSearchPlus} />
+                                <ButtonIcon icon={FaSearchMinus} />
+                                <ButtonIcon icon={FaSearch} />
+                                <ButtonIcon icon={FaSave} />
+                                <ButtonIcon icon={FaBan} />
+                                <ButtonIcon icon={FaRegPaperPlane} />
                             </div>
                         </div>
                         <div className="columns p-3 is-justify-content-center">
-                            <div class="table-container">
-                                <table class="table is-fullwidth">
-                                    <thead>
-                                        <tr>
-                                        <th><abbr title="#">#</abbr></th>
-                                        <th>Duration (sec)</th>
-                                        <th>Label</th>
-                                        <th><abbr title="Option"></abbr></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th>1</th>
-                                            <td>1.293 - 4.234</td>
-                                            <td>Category01:Subcaregory02</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <th>2</th>
-                                            <td>1.293 - 4.234</td>
-                                            <td>Category01:Subcaregory02</td>
-                                            <td>*</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div className="table-container">
+                                <TableTag class="table is-fullwidth" />
                             </div>
                         </div>
                     </div>
