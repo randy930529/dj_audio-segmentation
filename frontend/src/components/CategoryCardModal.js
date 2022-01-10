@@ -48,8 +48,10 @@ class CategoryCardModal extends React.Component{
                                     <PrimaryTextArea class="textarea is-primary" />
                                 </div>
                             </div>
-                                <button class="button is-success">OK</button>
-                                <button class="button">Cancel</button>
+                            <footer className="modal-card-foot is-justify-content-right has-background-white">
+                                <button className="button is-success">OK</button>
+                                <button className="button">Cancel</button>
+                            </footer>
                         </div>
                     </div>
 
