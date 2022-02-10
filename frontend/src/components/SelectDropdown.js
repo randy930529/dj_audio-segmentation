@@ -6,7 +6,7 @@ export function SelectDropdown (props) {
                 {
                     options.map((option) => {
                         return (
-                            <option key={option}>{option}</option>
+                            <option key={option.id}>{option.title}</option>
                         )
                     })
                 }

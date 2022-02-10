@@ -1,11 +1,17 @@
 import { THead } from './THead';
-import { TBody } from './TBody';
+import TBody from './TBody';
+import React from 'react';
 
-export function TableTag(props) {
-    return (
-        <table className={props.class}>
-            <THead />
-            <TBody />
-        </table>
-    )
+class TableTag extends React.Component {
+
+    render(){
+        return (
+            <table className={this.props.class}>
+                <THead />
+                <TBody segments= {this.props.segments} getBufferSegment={() =>this.props.getBufferSegment()} duration={this.props.duration} />
+            </table>
+        )
+    }
 }
+
+export default TableTag;
