@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import styles from './App.module.css';
 import 'bulma';
 import AudioCardPage from './pages/AudioCardPage';
 import AudioUploadPage from './pages/AudioUploadPage';
-import {getContext} from "./utils/getUtilsAudioClip";
+import { getContext } from "./utils/getUtilsAudioClip";
 
 
 function App() {
@@ -18,34 +18,34 @@ function App() {
   return (
     <Router>
       <header>
-          <Link to="/"><h1 className={styles.AppLink}>Audio Segmentation Tool</h1></Link>
+        <Link to="/"><h1 className={styles.AppLink}>Audio Segmentation Tool</h1></Link>
       </header>
       <main>
-          <Routes>
-              <Route exact path="/audio/:audioClip" element={
-                <AudioCardPage 
-                  context={context} 
-                  file={file} 
-                  audioClip={audioClip} 
-                  buffer={audioBuffer} 
-                  setAudioBuffer={setAudioBuffer} 
-                  position={position}
-                  setPosition={setPosition}
-                  showMarker={showMarker}
-                  setShowMarker={setShowMarker}
-                />
-              } 
-              />
-              
-              <Route path="/" element={
-                <AudioUploadPage
-                  context={context} 
-                  setFile={setFile}
-                  setAudioClip={setAudioClip}
-                />
-              }
-              />
-          </Routes>
+        <Routes>
+          <Route exact path="/audio/:audioClip" element={
+            <AudioCardPage
+              context={context}
+              file={file}
+              audioClip={audioClip}
+              buffer={audioBuffer}
+              setAudioBuffer={setAudioBuffer}
+              position={position}
+              setPosition={setPosition}
+              showMarker={showMarker}
+              setShowMarker={setShowMarker}
+            />
+          }
+          />
+
+          <Route path="/" element={
+            <AudioUploadPage
+              context={context}
+              setFile={setFile}
+              setAudioClip={setAudioClip}
+            />
+          }
+          />
+        </Routes>
       </main>
     </Router>
   );
