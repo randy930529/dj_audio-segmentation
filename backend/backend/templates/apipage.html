@@ -1,0 +1,18 @@
+{% extends "rest_framework/base.html" %} {% block title %} Audio
+SegmentationTool REST framework {% endblock %}
+{% block breadcrumbs %}
+<ul class="breadcrumb">
+      <li class="active"><a href={% url 'home'%}>home</a></li>
+    {% block breadcrumbs_empty %}&nbsp;{% endblock breadcrumbs_empty %}
+</ul>
+{% endblock %}
+{% block content %}
+    <nav class="nav flex-column">
+        <span class="badge bg-secondary m-3">Manager</span>
+        <a class="nav-link disabled m-3 container-fluid" href={% url 'admin:index' %}>Admin</a>
+        <span class="badge bg-secondary m-3">API Link</span>
+        <a class="nav-link active m-3 container-fluid" aria-current="page" href={% url 'audio' %}>Audio Files</a>
+        <a class="nav-link m-3 container-fluid" href={% url 'categories' %}> Category</a>
+        <a class="nav-link m-3 container-fluid" href={% url 'segments' %}>Segment</a>
+    </nav>
+{% endblock %}
